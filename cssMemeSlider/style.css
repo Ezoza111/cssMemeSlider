@@ -141,9 +141,22 @@ img {
     width: 30%;
     height: 30%;
 }
-.text_animation {
-    transition: 3s ease-in-out;
-}
+.text_animation  {
+    animation-duration: 1s;
+    animation-name: slidein;
+    transition-delay: 3s;
+  }
+  
+  @keyframes slidein {
+    from {
+      scale: 0;
+    }
+  
+    to {
+      scale:1;
+    }
+  }
+  
 .button_pogination_container {
     background: green;
     width: 20%;

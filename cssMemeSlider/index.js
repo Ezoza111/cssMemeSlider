@@ -7,5 +7,6 @@ const textInfo = ['Большая галактика', 'Супер больша�
 btnArr.forEach((el)=> el.addEventListener('click', ()=>{
     
     image.setAttribute('src', `./assets/foto/photo_${btnArr.indexOf(el)+1}.jpg`);
-    text.innerHTML = `${textInfo[btnArr.indexOf(el)]}`;
+
+    text.innerHTML = `<div class="text_animation">${textInfo[btnArr.indexOf(el)]}</div>}`;
 }));
