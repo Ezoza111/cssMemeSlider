@@ -1,3 +1,92 @@
+/* Указываем box sizing */
+*,*::before,*::after {
+    box-sizing: border-box;
+  }
+  /* Убираем внутренние отступы */
+  ul[class], ol[class] {
+    padding: 0;
+  }
+  /* Убираем внешние отступы и стили */
+  body, form,
+  h1,h2,h3,h4,p, ul[class],ol[class],li,a:not([class]) {
+    margin: 0;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+  }
+  /* Выставляем основные настройки по-умолчанию для body */
+  body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 1440px;
+      margin: 0 auto;
+  }
+  html {
+    height: 100%;
+  }
+  /* Добавили плавную прокрутку */
+  html {
+      scroll-behavior: smooth; 
+  }
+  /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+  ul[class],
+  ol[class] {
+    list-style: none;
+  }
+  /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .telep:hover {
+    color: #BB945F;
+    transition: 0.5s;
+  }
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  /* Упрощаем работу с изображениями */
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  /* Наследуем шрифты для инпутов и кнопок */
+  input, button, textarea,select {
+    font: inherit;
+  }
+  /*Стиль для кониейнера основного!!!!!!!!!!!!!!!!!!!!!*/
+  .container {
+    width: calc(1400/1440*100%);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  /* Стиль для заголовков h2 и их нижнихлиний  */
+  .section_tittle {
+    display: flex;
+   height: 61px;
+   flex-shrink: 0;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+  }
+  .h2_tittle {
+    color: #0C0C0E;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
 body {
     display: flex;
     margin: 0 auto;
@@ -21,13 +110,24 @@ html {
     justify-content: space-around;
     align-items: center;
 }
+/*slaider_container slaider_container slaider_container*/
 .slaider_container {
     height: 70%;
-    width: 90%;
-    background: yellow;
+    width: 90%;;
     display: flex;
     border-radius: 1%;
+    justify-content: center;
 }
+.slaider_foto {
+    width: 100%;
+    height: 100%;
+}
+img {
+   width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+/*info_container info_container info_container info_container */
 .info_container {
     height: 20%;
     width: 90%;
@@ -41,11 +141,30 @@ html {
     width: 30%;
     height: 30%;
 }
+.text_animation {
+    transition: 3s ease-in-out;
+}
 .button_pogination_container {
     background: green;
     width: 20%;
     height: 30%;
     display: flex;
     justify-content: flex-end
+}
+.button_pogination {
+    width: 20%;
+    height: 95%;
+    background: blue;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_div {
+    width: 80%;
+    height: 60%;
+    flex-shrink: 0;
+    background: #BB945F;
+    border-radius: 50%;
 }
 
