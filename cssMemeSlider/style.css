@@ -1,7 +1,4 @@
 /* Указываем box sizing */
-*,*::before,*::after {
-    box-sizing: border-box;
-  }
   /* Убираем внутренние отступы */
   ul[class], ol[class] {
     padding: 0;
@@ -168,7 +165,7 @@ img {
     width: 20%;
     height: 30%;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
 }
 .button_pogination {
     width: 20%;
@@ -179,6 +176,7 @@ img {
     align-items: center;
     background: #000;
     border: none;
+   transition: 0.5s;
 }
 .btn_div {
     width: 80%;
@@ -192,10 +190,11 @@ img {
     border: 2px blue solid;
     transition: 0.5s;
 }
-.active .btn_div:hover { background: #000;}
-.btn_div:hover {
+.button_pogination:hover .btn_div{ 
     background: white;
-    transition: 0.3s;
+    transition: 0.3s;}
+.button_pogination:hover .active.btn_div{
+    background: black;
 }
 .btn_div:active {
     background:antiquewhite;
