@@ -1,4 +1,4 @@
-/* Указываем box sizing */
+
   /* Убираем внутренние отступы */
   ul[class], ol[class] {
     padding: 0;
@@ -20,70 +20,18 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      max-width: 1440px;
+      background-color: orange;
       margin: 0 auto;
   }
   html {
     height: 100%;
-  }
-  /* Добавили плавную прокрутку */
-  html {
-      scroll-behavior: smooth; 
-  }
-  /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-  ul[class],
-  ol[class] {
-    list-style: none;
-  }
-  /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  .telep:hover {
-    color: #BB945F;
-    transition: 0.5s;
-  }
-  a:not([class]) {
-    text-decoration-skip-ink: auto;
   }
   /* Упрощаем работу с изображениями */
   img {
     max-width: 100%;
     display: block;
   }
-  /* Наследуем шрифты для инпутов и кнопок */
-  input, button, textarea,select {
-    font: inherit;
-  }
-  /*Стиль для кониейнера основного!!!!!!!!!!!!!!!!!!!!!*/
-  .container {
-    width: calc(1400/1440*100%);
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  /* Стиль для заголовков h2 и их нижнихлиний  */
-  .section_tittle {
-    display: flex;
-   height: 61px;
-   flex-shrink: 0;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: center;
-  }
-  .h2_tittle {
-    color: #0C0C0E;
-    font-family: Forum;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px; /* 100% */
-    letter-spacing: 2px;
-    text-transform: capitalize;
-  }
+ 
 body {
     display: flex;
     margin: 0 auto;
@@ -135,8 +83,8 @@ img {
 .text_container{
     width: 50%;
     height: 30%;
-    color: aliceblue;
-    font-size: 25px;
+    color: orange;
+    font-size: 1.4em;
 }
 .text_animation  {
     animation-duration: 0.5s;
@@ -147,8 +95,8 @@ img {
   
   @keyframes slidein {
     0% {scale: 0;}
-    70% {scale:1; font-size:30px;}
-    100% {scale:1; font-size: 28px;}
+    70% {scale:1; font-size:1.6em;}
+    100% {scale:1; font-size: 1.5em;}
   }
   .img_animation  {
     animation-duration: 0.5s;
@@ -174,7 +122,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000;
+    background: inherit;
     border: none;
    transition: 0.5s;
 }
@@ -182,12 +130,12 @@ img {
     width: 80%;
     height: 60%;
     flex-shrink: 0;
-    background: blue;
+    background: orange;
     border-radius: 50%;
 }
 .active{
     background: #000;
-    border: 2px blue solid;
+    border: 0.1rem orange solid;
     transition: 0.5s;
 }
 .button_pogination:hover .btn_div{ 
@@ -195,9 +143,10 @@ img {
     transition: 0.3s;}
 .button_pogination:hover .active.btn_div{
     background: black;
+    border: 0.1rem  orange solid;
 }
-.btn_div:active {
-    background:antiquewhite;
-    width: 130%;
-    height: 120%;
-transition: all 0.5;}
+.button_pogination:active .btn_div {
+    background: white;
+    width: 200%;
+    height: 200%;
+transition: 0.1s;}
